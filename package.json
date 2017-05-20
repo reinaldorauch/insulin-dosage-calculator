@@ -1,0 +1,23 @@
+{
+  "name": "calculadora-dose-rapida",
+  "version": "0.0.1",
+  "description": "Calculadora para doses de insulina lispro",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha --timeout 3000"
+  },
+  "author": "Reinaldo A. C. Rauch <reinaldorauch@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.2.0",
+    "jsdom": "^10.1.0",
+    "mocha": "^3.4.1",
+    "nyc": "^10.3.2"
+  },
+  "dependencies": {
+    "mathjs": "^3.13.1"
+  }
+}

@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Calculadora dose rápida</title>
+  </head>
+  <body>
+    <form>
+      <p>Contagem da refeição: <input type="number" id="contagem">g de carboidratos</p>
+      <p>Glicemia atual: <input type="number" id="glicemia">mg/dL</p>
+      <p>O contexto é r => contagem da refeição, a => glicemia atual</p>
+      <p>Fórmula de digestão: <input type="text" id="digestao"></p>
+      <p>Fórmula de correção: <input type="text" id="correcao"></p>
+      <p><button id="calcular">Calcular</button></p>
+      <p>Unidades de insulina: <span id="resultado"></span></p>
+      <p><a target="_blank" href="./test/index.html">Testar</a></p>
+    </form>
+    <script type="text/javascript" src="./node_modules/mathjs/dist/math.min.js"></script>
+    <script type="text/javascript" src="./src/calculadora.js"></script>
+  </body>
+</html>
