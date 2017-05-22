@@ -18,6 +18,8 @@
     "nyc": "^10.3.2"
   },
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
     "mathjs": "^3.13.1"
   }
 }

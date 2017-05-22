@@ -1,19 +1,86 @@
-<html>
+<html lang="pt_BR">
   <head>
     <title>Calculadora dose rápida</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./src/index.css">
   </head>
   <body>
-    <form>
-      <p>Contagem da refeição: <input type="number" id="contagem">g de carboidratos</p>
-      <p>Glicemia atual: <input type="number" id="glicemia">mg/dL</p>
-      <p>O contexto é r => contagem da refeição, a => glicemia atual</p>
-      <p>Fórmula de digestão: <input type="text" id="digestao"></p>
-      <p>Fórmula de correção: <input type="text" id="correcao"></p>
-      <p><button id="calcular">Calcular</button></p>
-      <p>Unidades de insulina: <span id="resultado"></span></p>
-      <p><a target="_blank" href="./test/index.html">Testar</a></p>
-    </form>
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">Calculadora de Dosagem de Insulina</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul id="navbar" class="nav navbar-nav">
+            <li>
+              <a target="_blank" href="./test/index.html">Testar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <form class="form-horizontal" action="">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="contagem">Contagem da refeição:</label>
+          <div class="input-group col-sm-10">
+            <input class="form-control" placeholder="Contagem de carboidratos (somente dígitos)" type="number" name="contagem" id="contagem">
+            <div class="input-group-addon">g de carboidratos</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="glicemia" class="control-label col-sm-2" col-sm-2="">Glicemia atual:</label>
+          <div class="input-group col-sm-10">
+            <input class="form-control" type="number" id="glicemia">
+            <div class="input-group-addon">mg/dL</div>
+          </div>
+        </div>
+        <p>O contexto é mealCount => contagem da refeição, currentGlicemy => glicemia atual</p>
+        <div class="form-group">
+          <label class="control-label col-sm-2">Fórmula de digestão:</label>
+          <div class="input-group col-sm-10">
+            <input class="form-control" type="text" id="digestao">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2">Fórmula de correção:</label>
+          <div class="input-group col-sm-10">
+            <input class="form-control" type="text" id="correcao">
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary pull-right" type="button" id="calcular">Calcular</button>
+        </div>
+        <p>Unidades de insulina: <span class="h1" id="resultado"></span></p>
+      </form>
+    </div>
+
+    <!-- Javascript code -->
+
+    <!-- Third party -->
     <script type="text/javascript" src="./node_modules/mathjs/dist/math.min.js"></script>
+    <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- / Third party -->
+
+    <!-- Custom -->
     <script type="text/javascript" src="./src/calculadora.js"></script>
+    <script type="text/javascript" src="./src/index.js"></script>
+    <!-- / Custom -->
+
+    <!-- / Javascript code -->
   </body>
 </html>
