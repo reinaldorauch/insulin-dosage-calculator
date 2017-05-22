@@ -12,12 +12,17 @@
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-angular": "^2.4.0",
     "eslint-plugin-import": "^2.2.0",
     "jsdom": "^10.1.0",
     "mocha": "^3.4.1",
     "nyc": "^10.3.2"
   },
   "dependencies": {
+    "angular": "^1.6.4",
+    "angular-animate": "^1.6.4",
+    "angular-aria": "^1.6.4",
+    "angular-material": "^1.1.4",
     "mathjs": "^3.13.1"
   }
 }
